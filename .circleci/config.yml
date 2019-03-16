@@ -15,7 +15,7 @@ install_restore_cache: &install_restore_cache
 
 install_run: &install_run
   name: Install dependencies with Yarn, purely from the lockfile
-  command: yarn install --frozen-lockfile
+  command: yarn install
 
 install_save_cache: &install_save_cache
   name: Cache installed dependencies
@@ -37,7 +37,7 @@ jobs:
       - run:
           name: Run Unit Tests
           command: yarn test:unit
-          
+
       - run:
           name: Run e2e Tests
           # Install libgconf, needed by Cypress' Electron, then run tests
