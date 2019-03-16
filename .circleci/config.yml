@@ -68,9 +68,6 @@ jobs:
   deploy:
     <<: *vm_settings
     steps:
-      - add_ssh_keys:
-          fingerprints:
-            - "02:3d:a1:64:e8:7b:2b:d9:32:45:ff:0b:e9:52:41:07"
       - checkout
 
       # Install dependencies
