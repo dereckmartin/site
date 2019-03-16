@@ -35,9 +35,13 @@ jobs:
       - save_cache: *install_save_cache
 
       - run:
-          name: Run tests
+          name: Run Unit Tests
+          command: yarn test:unit
+          
+      - run:
+          name: Run e2e Tests
           # Install libgconf, needed by Cypress' Electron, then run tests
-          command: sudo apt-get install libgconf-2-4 && yarn test
+          command: sudo apt-get install libgconf-2-4 && yarn test:2e2
 
       # Store test artifacts
       - store_artifacts:
