@@ -34,9 +34,9 @@ jobs:
       - run: *install_run
       - save_cache: *install_save_cache
 
-      - run:
-          name: Run Unit Tests
-          command: yarn test:unit
+      #- run:
+      #    name: Run Unit Tests
+      #    command: yarn test:unit
 
       - run:
           name: Run e2e Tests
@@ -44,8 +44,8 @@ jobs:
           command: sudo apt-get install libgconf-2-4 && yarn test:2e2
 
       # Store test artifacts
-      - store_artifacts:
-          path: tests/unit/coverage
+      #- store_artifacts:
+      #    path: tests/unit/coverage
       - store_artifacts:
           path: tests/e2e/videos
       - store_artifacts:
