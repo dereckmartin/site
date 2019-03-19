@@ -91,7 +91,13 @@ jobs:
             git config user.name "Dereck Martin"
       - run:
           name: Deploy docks to gh-pages branch
-          command: yarn deploy
+          command: |
+            git branch --delete --force gh-pages
+            git checkout --orphan gh-pages
+            git add -f dist
+            git commit -m "Rebuild gh-pages [ci skip]"
+            git filter-branch -f --prune-empty --subdirectory-filter dist
+            git push -f origin gh-pages
 
 workflows:
   version: 2
