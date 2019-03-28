@@ -16,8 +16,8 @@
 
       <!-- navbar links right aligned -->
       <b-navbar-nav class="ml-auto">
-        <b-nav-item href="#">Blog</b-nav-item>
-        <b-nav-item href="/contact">Contact</b-nav-item>
+        <b-nav-item to="/blog">Blog</b-nav-item>
+        <b-nav-item to="/contact">Contact</b-nav-item>
       </b-navbar-nav>
     </b-navbar>
   </div>
