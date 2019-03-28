@@ -2,7 +2,7 @@
 
 describe("ContactView", () => {
   it("Visits Contact View", () => {
-    cy.visit("/contact");
+    cy.visit("/#/contact");
     cy.get('article').should('have.id', 'v-contact');
   });
 });
