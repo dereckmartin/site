@@ -20,9 +20,6 @@ module.exports = {
     }
   },
   configureWebpack:{
-    performance: {
-      hints: true
-    },
     optimization: {
       splitChunks: {
         minSize: 10000,
