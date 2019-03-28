@@ -1,0 +1,109 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+@import 'https://fonts.googleapis.com/css?family=Comfortaa';
+@import 'https://fonts.googleapis.com/css?family=Quicksand:400,700';
+@import 'https://use.fontawesome.com/releases/v5.8.1/css/all.css';
+
+$break-sm: 576px;
+$break-md: 768px;
+$break-lg: 992px;
+$break-xlg: 1200px;
+
+.dm-wrapper {
+  @media screen and (min-width: $break-lg) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.dm-header {
+  position: relative;
+
+  & .dm-header-inner {
+    position: static;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.dm-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.dm-container-sm {
+  @media screen and (min-width: $break-sm) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  @media screen and (min-width: $break-md) {
+    margin-left: 56px;
+  }
+
+  @media screen and (min-width: $break-lg) {
+    margin-left: 310px;
+  }
+
+  @media screen and (min-width: $break-xlg) {
+    margin-left: 330px;
+  }
+
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.dm-header-row {
+  display: table;
+  width: 100%;
+  font-family: Quicksand,sans-serif;
+  font-weight: 700;
+  color: rgb(117,117,117);
+
+  & .dm-header-col {
+    @media screen and (min-width: $break-lg) {
+      height: 50px;
+    }
+
+    display: table-cell;
+    vertical-align: middle;
+
+    & .dm-brand {
+      line-height: 1;
+      font-size: 26px;
+      font-family: Comfortaa,cursive;
+
+      & span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+#dm-sidebar-btn {
+  @media screen and (min-width: $break-lg) {
+    position: absolute;
+    right: 0;
+    top: 20px;
+  }
+
+  & .dm-icon {
+    font-size: 26px;
+    line-height: 50px;
+    margin: 0;
+    vertical-align: top;
+    display: inline-block;
+  }
+}
+
+.dm-btn-icon {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border-radius: 50%
+}
+
+.dm-btn-shade {
+  box-shadow: -1px 2px 4px rgba(0,0,0,.25)
+}

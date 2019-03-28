@@ -4,7 +4,6 @@
 
 <script>
 import { Component, Vue } from "vue-property-decorator";
-import VCard from "@/components/VCard.vue";
 
 export default {
   computed: {
@@ -15,14 +14,3 @@ export default {
   components: {}
 };
 </script>
-
-<style>
-.dm-profile-image {
-  margin-top: -160px;
-  border: 1em solid white;
-}
-
-.dm-card-top {
-  margin-top: 160px;
-}
-</style>

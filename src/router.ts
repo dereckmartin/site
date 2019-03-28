@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./views/Home.vue";
+import Posts from "./statics/data/posts.json";
 
 Vue.use(Router);
 
@@ -11,16 +11,40 @@ export default new Router({
     {
       path: "/",
       name: "home",
-      component: Home
+      components: {
+        default: () => import("@/views/Home.vue")
+      },
+      meta: {
+        title: "Home"
+      },
+      props: {
+        default: true
+      }
     },
     {
-      path: "/about",
-      name: "about",
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+      path: "/contact",
+      name: "contact",
+      components: {
+        default: () => import("./views/Contact.vue")
+      },
+      meta: {
+        title: "Contact"
+      },
+      props: {
+        default: true
+      }
+    },
+
+    /**
+     * Generates post routes based on static post json data
+     */
+    ...Posts.map(entry => ({
+      path: `/${entry.id}`,
+      name: entry.id,
       component: () =>
-        import(/* webpackChunkName: "about" */ "./views/About.vue")
-    }
+        import(/* webpackChunkName: "posts" */ `./markdowns/posts/
+          ${entry.id}
+        .md`)
+    }))
   ]
 });
