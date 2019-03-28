@@ -18,5 +18,16 @@ module.exports = {
       preProcessor: "scss",
       patterns: [path.resolve(__dirname, "./src/styles/app.scss")]
     }
+  },
+  configureWebpack:{
+    performance: {
+      hints: true
+    },
+    optimization: {
+      splitChunks: {
+        minSize: 10000,
+        maxSize: 250000,
+      }
+    }
   }
 }
