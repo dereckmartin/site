@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.ebdfc4d54ccd9036b9839b937d38c783.js"
+  "/precache-manifest.d9783385be6ce654e6533ccbdfb27360.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "dereckmartin"});

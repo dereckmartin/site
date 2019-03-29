@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["posts0~0a89c21f"],{f37c:function(e,t,n){"use strict";n.r(t);var c=function(){var e=this,t=e.$createElement;e._self._c;return e._m(0)},s=[function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("section",[n("p",[e._v("test1")])])}],r=n("2877"),l={},u=Object(r["a"])(l,c,s,!1,null,null,null);t["default"]=u.exports}}]);
+//# sourceMappingURL=posts0~0a89c21f.ae262c83.js.map
