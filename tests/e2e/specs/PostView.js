@@ -8,7 +8,7 @@
 
 describe("PostView", () => {
   it("Visits Post View", () => {
-    cy.visit("/some-post");
+    cy.visit("/#/some-post");
     cy.get('article').should('have.id', 'v-some-post');
   });
 });
